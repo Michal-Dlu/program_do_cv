@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<fieldset>
+    <form method="post" action="" >
+        <input type="text" placeholder="Wprowadz imię" name="name" ><br>
+        <input type="text" placeholder="Wprowadz nazwisko" name="surname" ><br>
+        <input type="text" placeholder="Wprowadź datę urodzenia" name="born" ><br>
+        <input type="text" placeholder="Wprowadz adres zamieszkania" name="adress" ><br>
+        <input type="email" placeholder="Wprowadz adres email" name="email" ><br>
+        <input type="tel" placeholder="123 456 789" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" ><br>
+        <textarea placeholder="Opisz swój profil zawodowy" name="professional_profile"></textarea>
+        <input type="submit" value="send"><input type="reset" value="Clear">
+    </form>
+</fieldset>
+<form action="" method="post">
+    Zdjęcie: <input type="file" name="foto">
+    <input type="submit" value="Wyślij zdjęcie" name="ok">
+</form> 
+<h1>Wykszatłcenie</h1>
+<form method="post" action="">
+    <input type="text" placeholder="Lata: " name="study"><br> 
+    <input type="text" placeholder="Szkoła lub uczelnia" name="school"><br>
+    <textarea placeholder="Opisz kierunek, tytuł naukowy" name="akademic"></textarea>
+    <input type="submit" value="Dodaj" name="Add_data"><input type="submit" value="Koniec"><input type="reset" value="Clear"> 
+</form>
+
+<h1>Doświadczenie zawodowe</h1>
+<form method="post" action="">
+    <input type="text" placeholder="Lata: " name="work"><br> 
+    <input type="text" placeholder="Zakład pracy" name="work_place"><br>
+    <textarea placeholder="Opisz zakres obowiązków" name="experience"></textarea>
+    <input type="submit" value="Dodaj" name="Add_experience"><input type="submit" value="Koniec"><input type="reset" value="Clear"> 
+</form>
+
+<h1>Umiejętności techniczne</h1>
+<form method="post" action="">
+    <h3>Języki programowania i technologie</h3>
+    <label>PHP</label><input type="checkbox" name="php">
+    <label>JavaScript</label><input type="checkbox" name="javascript">
+    <label>HTML</label><input type="checkbox" name="html">
+    <label>CSS</label><input type="checkbox" name="css"><br>
+    <input type="text" name="programm" placeholder="Wpisz inne języki programowania"><br>   
+    <label>MySQL</label><input type="checkbox" name="mysql">    
+    <label>PostgreeSQL</label><input type="checkbox" name="postgreesql">
+    <input type="text" name="other_tech" placeholder="Wpisz inne technologie">
+    <h3>Frameworki i środowiska:</h3>
+    <label>Symfony</label><input type="checkbox" name="symfony">
+    <label>Laravel</label><input type="checkbox" name="laravel">
+    <label>Visual Studio 2022</label><input type="checkbox" name="visual">
+    <label>Android Studio</label><input type="checkbox" name="android">
+    <label>React</label><input type="checkbox" name="react">
+    <label>Angular</label><input type="checkbox" name="angular">
+    <input type="text" name="other_fr" placeholder="Inne frameworki">
+    <input type="text" name="other" placeholder="Inne umiejętności">    
+
+    <input type="submit" value="Wyślij" name="Add"><input type="reset" value="Clear"> 
+</form>
+<h1>Języki obce</h1>
+<form method="post" action="">
+    <input type="text" placeholder="Lata: " name="work"><br> 
+    <input type="text" placeholder="Zakład pracy" name="work_place"><br>
+    <textarea placeholder="Opisz zakres obowiązków" name="experience"></textarea>
+    <input type="submit" value="Dodaj" name="Add_experience"><input type="submit" value="Koniec"><input type="reset" value="Clear"> 
+</form>
+
+</body>
+</html>
