@@ -105,12 +105,12 @@ session_start();
 </select>
 <select name="lang_fr">
     <optgroup label="Język francuzki">
-    <option value="frA1">Francuzki A1</option>
-    <option value="frA2">Francuzki A2</option>
-    <option value="frB1">Francuzki B1</option>
-    <option value="frB2">Francuzki B2</option>
-    <option value="frC1">Francuzki C1</option>
-    <option value="frC2">Francuzki C2</option>
+    <option value="frA1">Francuski A1</option>
+    <option value="frA2">Francuski A2</option>
+    <option value="frB1">Francuski B1</option>
+    <option value="frB2">Francuski B2</option>
+    <option value="frC1">Francuski C1</option>
+    <option value="frC2">Francuski C2</option>
 </select>
 <select name="lang_ru">
     <optgroup label="Język rosyjski">
