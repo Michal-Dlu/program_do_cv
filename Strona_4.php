@@ -85,7 +85,7 @@ session_start();
 <div id="this_field7" class="this_field_out">
 <form method="post" action="skrypt.php" >
 <h1>Języki obce</h1>
-<select name="lang">
+<select name="lang_ang">
     <optgroup label="Język angielski">
     <option value="angA1">Angielski A1</option>
     <option value="angA2">Angielski A2</option>
@@ -94,7 +94,43 @@ session_start();
     <option value="angC1">Angielski C1</option>
     <option value="angC2">Angielski C2</option>
 </select>
-    <input type="submit" value="Dodaj" name="Add_experience"><input type="submit" value="Koniec"><input type="reset" value="Clear"> 
+<select name="lang_deu">
+    <optgroup label="Język niemiecki">
+    <option value="deuA1">Niemiecki A1</option>
+    <option value="deuA2">Niemiecki A2</option>
+    <option value="deuB1">Niemiecki B1</option>
+    <option value="deuB2">Niemiecki B2</option>
+    <option value="deuC1">Niemiecki C1</option>
+    <option value="deuC2">Niemiecki C2</option>
+</select>
+<select name="lang_fr">
+    <optgroup label="Język francuzki">
+    <option value="frA1">Francuzki A1</option>
+    <option value="frA2">Francuzki A2</option>
+    <option value="frB1">Francuzki B1</option>
+    <option value="frB2">Francuzki B2</option>
+    <option value="frC1">Francuzki C1</option>
+    <option value="frC2">Francuzki C2</option>
+</select>
+<select name="lang_ru">
+    <optgroup label="Język rosyjski">
+    <option value="ruA1">Rosyjski A1</option>
+    <option value="ruA2">Rosyjski A2</option>
+    <option value="ruB1">Rosyjski B1</option>
+    <option value="ruB2">Rosyjski B2</option>
+    <option value="ruC1">Rosyjski C1</option>
+    <option value="ruC2">Rosyjski C2</option>
+</select>
+<select name="wl">
+    <optgroup label="Język włoski">
+    <option value="laA1">Włoski A1</option>
+    <option value="laA2">Włoski A2</option>
+    <option value="laB1">Włoski B1</option>
+    <option value="laB2">Włoski B2</option>
+    <option value="laC1">Włoski C1</option>
+    <option value="laC2">Włoski C2</option>
+</select>
+    <input type="submit" value="Koniec"><input type="reset" value="Wyczyść"> 
 </form>
 </div>
 <script src="skrypt.js"></script>
