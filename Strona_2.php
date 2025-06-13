@@ -14,7 +14,7 @@ session_start();
     <input type="text" placeholder="Lata: " name="study" require><br> 
     <input type="text" placeholder="Szkoła lub uczelnia" name="school" require><br>
     <textarea placeholder="Opisz kierunek, tytuł naukowy" name="academic" require></textarea>
-    <input type="submit" value="Dodaj kolejną szkołę" name="Add_data"><input type="submit" value="Wyślij" name="ok1"><input type="reset" value="Wyczyść"> 
+    <input type="submit" value="Dodaj kolejną szkołę" name="Add_data"><input type="submit" value="Wyślij" name="ok1"><input type="reset" value="Wyczyść "> 
 
 </form>
 </body>
