@@ -2,9 +2,9 @@ class Disappear {
     constructor (obj, obj2, obj3){
     this.tag=obj;
     this.tag2=obj2;
-    this.tag3=obj3;
+    this.tag3=obj3;}
 
-    this.change_class = () => {            
+    change_class (){            
         this.tag.addEventListener('click', () => {
         this.tag2.classList.remove('this_field_in');
         this.tag2.classList.add('this_field_out');
@@ -13,18 +13,18 @@ class Disappear {
     };
     
     
-}};
+};
 
 class Send_options{
-    constructor (tag){
-        this.tag=tag;
+    constructor (obj){
+        this.tag=obj;
        }
 
        send(){
     this.tag.addEventListener('click',() => {
     // Pobieranie zaznaczonych opcji
     const selectedLanguages = [];
-    document.querySelectorAll(' select[name]').forEach(select  => {
+    document.querySelectorAll('select[name]').forEach(select => {
         if (select.className == 'this_field_in')
             selectedLanguages.push(select.value);           
         
@@ -39,12 +39,12 @@ class Send_options{
  
      xhr.onload  = function () {
          if (xhr.status === 200) {
-             console.log('Dane zostały zapisane');
+             alert('Dane zostały zapisane');
              
          } else {
-             console.error('Błąd wysyłania danych');
+             alert('Błąd wysyłania danych');
          }
-     }.bind(this);
+     }
  
      xhr.send(data.toString());
  })}};
@@ -229,6 +229,7 @@ langL.change_class1();
 let add_lang = document.getElementById('add_lang');
 let angielski = new Send_options(add_lang);
 angielski.send();
+
 
  
 
