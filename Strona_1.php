@@ -3,8 +3,7 @@ session_start();
 $flaga="strona1";
 $_SESSION['flaga']=$flaga;
 unset($_SESSION['programsData']);
-var_dump($_SESSION);
-var_dump($_POST);
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
