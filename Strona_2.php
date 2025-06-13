@@ -256,7 +256,7 @@ print"
 
 print "</body>
 </html>";
-unset($_SESSION['corr_id']);}    
+}    
 }
 else{header('location:Strona_1.php');}
 }
