@@ -130,10 +130,7 @@ else{header('location:Strona_1.php');}
 
 ?>
 
-<?php
-session_start();
 
-?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>

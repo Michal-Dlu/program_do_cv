@@ -59,7 +59,7 @@ if (count($result)>0){
 </div>
         
    <section id="person">
-   <p style="font-size:40px"><b>Curriculum Vitae</b></p>
+   <h1 style="font-size:40px"><strong>Curriculum Vitae</strong></h1>
   <h3>Dane osobowe</h3>   
    <b style="color:navy; font-size:35px;">
 <?php print "$name $surname";?></b><br>
@@ -73,7 +73,7 @@ if (count($result)>0){
 <?php print "<p id='prof'>{$professional_profile}</p>";?>
 </div><br>
 
-<img src="<?php print $foto?>" width=200px height=200px id="fota">
+<img src="<?php print $foto?>" alt = "Twoje Zdjęcie" width=200px height=200px id="fota">
   
     </section>
     <section id="school">
@@ -107,9 +107,9 @@ foreach ($result as $row){
 }
 $i=0;
 while ($i < count($study)) {
-    print "<b>$study[$i]</b><br>";
-    print "<b>$school[$i]</b><br>";
-    print "<i>Kierunek: $academic[$i]</i><br><br>";
+    print "<strong>$study[$i]</strong><br>";
+    print "<strong>$school[$i]</strong><br>";
+    print "<em>Kierunek: $academic[$i]</em><br><br>";
     $i++;
 }
 ?>
@@ -136,9 +136,9 @@ foreach ($result as $row){
 }
 $i=0;
 while ($i < count($work)) {
-    print "<b>$work[$i]</b><br>";
-    print "<b>$workPlace[$i]</b><br>";
-    print "<i>$experience[$i]</i><br><br>";
+    print "<strong>$work[$i]</strong><br>";
+    print "<strong>$workPlace[$i]</strong><br>";
+    print "<em>$experience[$i]</em><br><br>";
     $i++;
 }
 ?>
@@ -146,7 +146,7 @@ while ($i < count($work)) {
 </p>
     </section>
     <section id="technical">
-<h3 >Umiejętności techniczne</h3>
+<h3>Umiejętności techniczne</h3>
 <div class="pro">
 <h5 style="padding-top:5px">Języki programownia i technologie</h5>
 <p>
@@ -241,7 +241,7 @@ $pdo=null;}
 ?>
 </p>
     </section>
-<p><b>Zgoda na przetwarzanie danych</b></p>
+<p><strong>Zgoda na przetwarzanie danych</strong></p>
 <pre>   Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji
 procesu rekrutacji, zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679
 (RODO).
