@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 session_start();
 
@@ -131,7 +130,6 @@ else{header('location:Strona_1.php');}
 
 ?>
 
-=======
 <?php
 session_start();
 
@@ -264,4 +262,3 @@ else{header('location:Strona_1.php');}
 
 ?>
 
->>>>>>> 32768ff769e9ac4d274f228495da083fca9dd3ce
