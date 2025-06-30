@@ -24,8 +24,9 @@ $_SESSION['flaga']="strona4";}
 <header>
     <h1>Witamy na stronie Curriculum Vitae</h1>
 </header>
+<main>
 <section id="question1">
-    <p class = "paragraf">Jesteś tu pierwszy raz?</p>
+    <h2>Jesteś tu pierwszy raz?</h2>
     <p>Proszę kliknąć na przycisk poniżej, aby przejść do formularza aplikacyjnego.</p>
 </section>
 <section id="qusetion2">
@@ -33,7 +34,7 @@ $_SESSION['flaga']="strona4";}
     <input type="submit" value="Tak, przejdź dalej" aria-label="Przejdź dalej do wpypełniania aplikacji">
 </form>
 <br>
-<p class = "paragraf">Jestem tu po raz kolejny</p>
+<h3>Jestem tu po raz kolejny</h3>
 <p>Proszę wypełnić pola formularza poniżej wpisanymi wcześniej danymi, aby przejść do gotowego CV.</p>
 <form method="post" action="warunek.php" id="myForm">
     <label for = "name">Imię: </label>
@@ -43,12 +44,13 @@ $_SESSION['flaga']="strona4";}
     <span id="surname-error" class="error-message" aria-live="assertive"></span><br><br>
     <br><br>
     <label for = "password">Hasło: </label><input type = "password" placeholder="Wpisz min.8-znakowe hasło" name="password" id="password" required aria-label="Hasło" aria-describedby="password-error">
-    <span id="pass-error" class="error-message" aria-live="assertive"></span><br><br>
+    <span id="password-error" class="error-message" aria-live="assertive"></span><br><br>
     <br><br>
-    <label for = "btn">Zatwierdź: </label><button type = "button" name="start" id="btn" aria-label="Zatwierdź formularz">Przejdź do gotowego CV</button><br><br>
+    Zatwierdź formularz: <button type = "button" name="start" id="btn" aria-label="Zatwierdź formularz">Przejdź do gotowego CV</button><br><br>
     <label for = "reset">Wyczyść dane: </label><input type = "reset" value="Wyczyść" id="reset" aria-label="Wyczyść dane formularza">
 </form>
 </section>
+</main>
 </body>
 </html>
 <script>
@@ -80,7 +82,7 @@ $_SESSION['flaga']="strona4";}
 
     
     const inpPass = document.getElementById('password');
-    const errPass = document.getElementById('pass-error');
+    const errPass = document.getElementById('password-error');
 
     inpPass.addEventListener('blur', function(){
         if(!inpPass.value){
