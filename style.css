@@ -18,6 +18,7 @@ input[type="password"]
 margin-left:5px;
 font-size: 80%;
 }
+
 .error-message{
   color:red;
   font-weight: bold; 
@@ -125,7 +126,7 @@ margin-right: auto;
   border:1px double yellowgreen;
 }
 input{
-  min-width:20%;
+  min-width:30%;
   
   opacity:0.8;
 }

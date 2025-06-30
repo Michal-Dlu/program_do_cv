@@ -71,7 +71,7 @@ print"
     <fieldset>
         <label for='name'>Imię: </label><input type='text' placeholder='Wprowadz imię' name='name' required value='$name' aria-label='Imię' id='name' tabindex='0'><br><br>
         <label for='surname'>Nazwisko: </label><input type='text' placeholder='Wprowadz nazwisko' name='surname' required value='$surname' aria-label='Nazwisko' id='surname' tabindex='1'><br><br>
-        <label for='password'>Hasło: </label><input type='password' placeholder='Wpisz min.8-znakowe hasło' name='password' $disabled reqiured value='$password' pattern='.{8,}' title='Hasło musi mieć 8 znaków' aria-label='Hasło' id='password'  tabindex='2'><br><br>
+        <label for='password'>Hasło: </label><input type='password' placeholder='Wpisz min.8-znakowe hasło' name='password' $disabled reqiured value='$password' pattern='.{8,}' title='Hasło musi mieć 8 znaków' aria-label='Hasło' id='password'  tabindex='2' ><br><br>
         <label for='born'>Rok  urodzenia: </label><input type='text' placeholder='Wprowadź rok urodzenia' name='born' required value='$born' id='born' tabindex='3'><br><br>
         <label for='adress'>Adres zamieszkania: </label><input type='text' placeholder='Wprowadz adres zamieszkania' name='adress' required value='$adress' id='adress' tabindex='4'><br><br>
         <label for='mail'>Email: </label><input type='email' placeholder='Wprowadz adres email' name='email' required value='$email' aria-label='Email' id='mail' tabindex='5'><br><br>
