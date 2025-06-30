@@ -12,15 +12,20 @@ $_SESSION['flaga']="strona4";}
 ?>
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Startowa</title>
 </head>
 <body>
+<section id="banner">
     <h1>Witamy na stronie Curriculum Vitae</h1>
+</section>
+<section id="question1">
     <h2>Jesteś tu pierwszy raz?</h2>
+</section>
+<section id="qusetion2">
 <form method="post" action="Strona_1.php">
     <input type="submit" value="Tak, przejdź dalej">
 </form>
@@ -33,6 +38,7 @@ $_SESSION['flaga']="strona4";}
     <label for = "start">Zatwierdź: </label><button type = "button" name="start" id="btn">Przejdź do gotowego CV</button><br><br>
     <label for = "reset">Wyczyść dane: </label><input type = "reset" value="Wyczyść">
 </form>
+</section>
 </body>
 </html>
 <script>
