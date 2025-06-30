@@ -18,6 +18,20 @@ input[type="password"]
 margin-left:5px;
 font-size: 80%;
 }
+.error-message{
+  color:red;
+  font-weight: bold; 
+}
+
+
+.paragraf{
+  font-size: 25px;
+  font-weight: bold;
+}
+h1{
+  text-align: center;
+}
+
 #fota
 {
     position:absolute;
