@@ -1,19 +1,20 @@
-<?php
-session_start();
-$flaga="strona1";
-$_SESSION['flaga']=$flaga;
-unset($_SESSION['programsData']);
-
-?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Michał Dłubak">
+    <title>Formularz wstępny aplikacji CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Formularz wstępny aplikacji CV</h1>
+<?php
+session_start();
+$flaga="strona1";
+$_SESSION['flaga']=$flaga;
+unset($_SESSION['programsData']);
+?>
     <?php
     $name="";
     $surname = "";
@@ -23,7 +24,7 @@ unset($_SESSION['programsData']);
     $phone="";
     $professional_profile="";
     $val="Wyślij";
-    $input="<input type='reset' value='Wyczyść'>";
+    $input="<label for='reset'>Wyczyść dane formularza</label><input type='reset' value='Wyczyść' id='reset'>";
     $inp_name="ok";
     $password ="";
     $disabled="";
@@ -66,18 +67,18 @@ unset($_SESSION['programsData']);
     
 print"
 
-    <form method='post' action='skrypt.php' ENCTYPE='multipart/form-data'>
+    <form method='post' action='skrypt.php' ENCTYPE='multipart/form-data' .form-container>
     <fieldset>
-        <input type='text' placeholder='Wprowadz imię' name='name' required value='$name'><br>
-        <input type='text' placeholder='Wprowadz nazwisko' name='surname' required value='$surname'><br>
-        <input type='password' placeholder='Wpisz min.8-znakowe hasło' name='password' $disabled reqiured value='$password' pattern='.{8,}' title='Hasło musi mieć 8 znaków'><br>
-        <input type='text' placeholder='Wprowadź rok urodzenia' name='born' required value='$born'><br>
-        <input type='text' placeholder='Wprowadz adres zamieszkania' name='adress' required value='$adress'><br>
-        <input type='email' placeholder='Wprowadz adres email' name='email' required value='$email'><br>
-        <input type='tel' placeholder='123 456 789' name='phone' pattern='[0-9]{3} [0-9]{3} [0-9]{3}' required value='$phone'><br>
-        <textarea placeholder='Opisz swój profil zawodowy' name='professional_profile' required  rows='6' cols='50'>$professional_profile</textarea><br><br>
-        Zdjęcie: <input type='file' name='foto' required ><br><br>
-        <input type='submit' value='$val' name='$inp_name'>$input
+        <label for='name'>Imię: </label><input type='text' placeholder='Wprowadz imię' name='name' required value='$name' aria-label='Imię' id='name'><br><br>
+        <label for='surname'>Nazwisko: </label><input type='text' placeholder='Wprowadz nazwisko' name='surname' required value='$surname' aria-label='Nazwisko' id='surname'><br><br>
+        <label for='password'>Hasło: </label><input type='password' placeholder='Wpisz min.8-znakowe hasło' name='password' $disabled reqiured value='$password' pattern='.{8,}' title='Hasło musi mieć 8 znaków' aria-label='Hasło' id='password'><br><br>
+        <label for='born'>Rok  urzodzenia: </label><input type='text' placeholder='Wprowadź rok urodzenia' name='born' required value='$born' id='born'><br><br>
+        <label for='adress'>Adres zamieszkania: </label><input type='text' placeholder='Wprowadz adres zamieszkania' name='adress' required value='$adress' id='adress'><br><br>
+        <label for='mail'>Email: </label><input type='email' placeholder='Wprowadz adres email' name='email' required value='$email' aria-label='Email' id='mail'><br><br>
+        <label for='phone'>Telefon: </label><input type='tel' placeholder='123 456 789' name='phone' pattern='[0-9]{3} [0-9]{3} [0-9]{3}' required value='$phone' aria-label='Telefon' id='phone'><br><br>
+        <label for='prof'>Profil zawodowy: </label><textarea placeholder='Opisz swój profil zawodowy' name='professional_profile' required  rows='6' cols='50' aria-label='Opisz profil zawodowy' id='prof'>$professional_profile</textarea><br><br><br>
+        <label for='foto'>Zdjęcie: </label><input type='file' name='foto' required id='foto' aria-label='Fotografia' id='foto'><br><br>
+        <label for='send'>Zatwierdź i wyślij dane: </label><input type='submit' value='$val' name='$inp_name' aria-label='Zatwierdź formularz' id='send'><br><br>$input
     </fieldset>
         </form>
 ";

@@ -43,7 +43,8 @@ if (count($result)>0){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Michał Dłubak">
+    <title>Kompletne CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -59,10 +60,10 @@ if (count($result)>0){
 </div>
         
    <section id="person">
-   <h1 style="font-size:40px"><strong>Curriculum Vitae</strong></h1>
+   <h1><strong>Curriculum Vitae</strong></h1>
   <h3>Dane osobowe</h3>   
-   <b style="color:navy; font-size:35px;">
-<?php print "$name $surname";?></b><br>
+   <strong style="color:navy; font-size:35px;">
+<?php print "$name $surname";?></strong><br>
    <p style="word-wrap: break-word;">
 <?php print "Rok urodzenia: $born";?><br>
 <?php print $adres ?><br>
