@@ -28,16 +28,16 @@ if($_SESSION['flaga']=="strona3"){
     <label for="js"  >JavaScript</label><input type="checkbox" name="javascript" id="js"><br>
     <label for="html" style="padding-right:22px">HTML      </label><input type="checkbox" name="html" id="html"><br>
     <label for="css" style="padding-right:39px">CSS       </label><input type="checkbox" name="css" id="css"><br>
-    Po zaznaczeniu dostępnych opcji języków programowania kliknij "Przejdź dalej"<br><br>
+    <p arial-label="Po zaznaczeniu dostępnych opcji języków programowania kliknij .'."Przejdź dalej".'.">Po zaznaczeniu dostępnych opcji języków programowania kliknij "Przejdź dalej"<br><br>
     <button id="go" type="button">Przejdź dalej</button>
 </div>
 
 <div id="this_field2" class="this_field_out">
     
-<h3>Języki programowania i technologie</h3> 
+<h2>Języki programowania i technologie</h2> 
 <label for="inny">Inny język</label><input type="checkbox" id="inny"><br><br>
-    <label class="other" for="prog" style="display:none">Wpisz inne języki programowania </label><input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog">       
-    <button type="button" class="other" style="display:none" id="add_prog">Dodaj kolejny język programowania</button><br>
+    <label class="other" for="prog" style="display:none">Wpisz inne języki programowania </label><input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog">   <br><br>    
+    <button type="button" class="other" style="display:none" id="add_prog">Dodaj kolejny język programowania</button><br><br>
     <p class="other" style="display:none">Po pisaniu wszystkich języków  programowania kliknij "Przejdź dalej"</p>
 <button id="go2" type="button">Przejdź dalej</button>
 </div>
@@ -45,57 +45,55 @@ if($_SESSION['flaga']=="strona3"){
 
 <div id="this_field3"  class="this_field_out">
 
-<h3>Języki programowania i technologie</h3>   
-    <label for="mysql" style="padding-right:26px">MySQL     </label><input type="checkbox" name="mysql" id="mysql"><br>    
+<h2>Języki programowania i technologie</h2>   
+    <label for="mysql" style="padding-right:26px">MySQL</label><input type="checkbox" name="mysql" id="mysql"><br><br>    
     <label for="postgresql">PostgreSQL</label><input type="checkbox" name="postgresql" id="postgresql"><br><br>
     Po zaznaczeniu dostępnych opcji technologii kliknij "Przejdź dalej"<br><br>
-<label>Przejdź dalej<button id="go3" type="button">Przejdź dalej</button></label>
+<button id="go3" type="button">Przejdź dalej</button>
 </div>
 
 <div id="this_field4" class="this_field_out">
  
-<h3>Języki programowania i technologie</h3>   
-<label for="inne_tech">Inna technologia</label><input type="checkbox" id="tech" id="inne_tech"><br>
-    <label for="inna_tech"><input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none" id="inna_tech"></label>  <br><br>
+<h2>Języki programowania i technologie</h2>   
+<label for="inne_tech">Inna technologia</label><input type="checkbox" id="tech" id="inne_tech"><br><br>
+    <label for="inna_tech"><input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none" id="inna_tech"></label><br><br>
    <button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj  kolejną technologię</button><br><br>
- 
-<label>Przejdź dalej<button id="go4" type="button">Przejdź dalej</button>  
+ <button id="go4" type="button">Przejdź dalej</button>
 </div>
 
 <div id="this_field5" class="this_field_out">
  
-<h3>Frameworki i środowiska:</h3>
-    <label for="Symfony" style="padding-right:64px">Symfony           </label><input type="checkbox" name="Symfony" id="Symfony"><br>
-    <label for="Laravel" style="padding-right:74px">Laravel           </label><input type="checkbox" name="Laravel" id="Laravel"><br>
+<h2>Frameworki i środowiska:</h2>
+    <label for="Symfony" style="padding-right:64px">Symfony</label><input type="checkbox" name="Symfony" id="Symfony"><br>
+    <label for="Laravel" style="padding-right:74px">Laravel</label><input type="checkbox" name="Laravel" id="Laravel"><br>
     <label for="visual" >Visual Studio 2022</label><input type="checkbox" name="Visual" id="visual"><br>
-    <label for="android" style="padding-right:24px">Android Studio    </label><input type="checkbox" name="Android" id="android"><br>
-    <label for="React"  style="padding-right:87px">React             </label><input type="checkbox" name="React" id="React"><br>
-    <label for="Angular" style="padding-right:71px">Angular           </label><input type="checkbox" name="Angular" id="Angular"><br><br>
+    <label for="android" style="padding-right:24px">Android Studio</label><input type="checkbox" name="Android" id="android"><br>
+    <label for="React"  style="padding-right:87px">React</label><input type="checkbox" name="React" id="React"><br>
+    <label for="Angular" style="padding-right:71px">Angular</label><input type="checkbox" name="Angular" id="Angular"><br><br>
     Po zaznaczeniu dostępnych opcji frameworków kliknij "Przejdź dalej"<br><br>
-<button id="go5" type="button">Przejdź dalej</button>  
+    <button id="go5" type="button">Przejdź dalej</button>  
 </div>
 
 <!--frameworki-->
 <div id="this_field6" class="this_field_out">
 
-<h3>Frameworki i środowiska:</h3>
+<h2>Frameworki i środowiska:</h2>
 
 <label>Inny framework</label><input type="checkbox" id="frame"><br>
-    <input type="text" id="this_frame" placeholder="Inne frameworki" style="display:none" class="other_frame">
-    <button type="button" id="next_frame" class="other_frame" style="display:none">Dodaj</button><br> 
+    <label for="this_frame" style="display:none" class="other_frame">Wpisz inne frameworki </label><input type="text" id="this_frame" placeholder="Inne frameworki" style="display:none" class="other_frame">
+    <button type="button" id="next_frame" class="other_frame" style="display:none">Dodaj inny framework</button><br> 
 
 <label>Inne umiejętności</label><input type="checkbox" id="skill"><br>   
-    <input type="text" id="this_skill" placeholder="Inne umiejętności" class="other_skill" style="display:none">
-    <button type="button" id="next_skill" class="other_skill" style="display:none">Dodaj</button> 
+    <label for="this_skill" class="other_skill" style="display:none">Wpisz inne umiejętności </label><input type="text" id="this_skill" placeholder="Inne umiejętności" class="other_skill" style="display:none">
+    <button type="button" id="next_skill" class="other_skill" style="display:none">Dodaj inną umiejętność</button> 
 
 <button id="go6" type="button">Dalej</button>
-
 </div>
 
 <div id="this_field7" class="this_field_out">
  
-<h1>Języki obce</h1>
-    <label>Angielski</label><input type="checkbox" id="ang"><br>
+<h2>Języki obce</h2>
+    <label for="ang">Angielski</label><input type="checkbox" id="ang"><br>
 <select name="lang_ang" class="this_field_out" id="l_ang">
     <optgroup label="Język angielski">
     <option value="Angielski A1">Angielski A1</option>
@@ -105,7 +103,7 @@ if($_SESSION['flaga']=="strona3"){
     <option value="Angielski C1">Angielski C1</option>
     <option value="Angielski C2">Angielski C2</option>
 </select>
-    <label>Niemiecki</label><input type="checkbox" id="de"><br>
+    <label for="de">Niemiecki</label><input type="checkbox" id="de"><br>
 <select name="lang_deu" class="this_field_out" id="l_de">
     <optgroup label="Język niemiecki">
     <option value="Niemiecki A1">Niemiecki A1</option>
@@ -115,7 +113,7 @@ if($_SESSION['flaga']=="strona3"){
     <option value="Niemiecki C1">Niemiecki C1</option>
     <option value="Niemiecki C2">Niemiecki C2</option>
 </select>
-    <label>Francuski</label><input type="checkbox" id="fr"><br>
+    <label for="fr">Francuski</label><input type="checkbox" id="fr"><br>
 <select name="lang_fr" class="this_field_out" id="l_fr">
     <optgroup label="Język francuski">
     <option value="Francuski A1">Francuski A1</option>
@@ -125,7 +123,7 @@ if($_SESSION['flaga']=="strona3"){
     <option value="Francuski C1">Francuski C1</option>
     <option value="Francuski C2">Francuski C2</option>
 </select>
-    <label>Rosyjski</label><input type="checkbox" id="ru"><br>
+    <label for="ru">Rosyjski</label><input type="checkbox" id="ru"><br>
 <select name="lang_ru" class="this_field_out" id="l_ru">
     <optgroup label="Język rosyjski">
     <option value="Rosyjski A1">Rosyjski A1</option>
@@ -135,7 +133,7 @@ if($_SESSION['flaga']=="strona3"){
     <option value="Rosyjski C1">Rosyjski C1</option>
     <option value="Rosyjski C2">Rosyjski C2</option>
 </select>
-    <label>Włoski</label><input type="checkbox" id="la"><br>
+    <label for="la">Włoski</label><input type="checkbox" id="la"><br>
 <select name="wl" class="this_field_out" id="l_la">
     <optgroup label="Język włoski">
     <option value="Włoski A1">Włoski A1</option>
@@ -145,9 +143,11 @@ if($_SESSION['flaga']=="strona3"){
     <option value="Włoski C1">Włoski C1</option>
     <option value="Włoski C2">Włoski C2</option>
 </select>
-<button id="add_lang" type="button">Wybierz język</button><br><br>
+<p arial-label="Po wybraniu wszystkich języków z opcji kiknij "Wybierz język"">Po wybraniu wszystkich języków z opcji kiknij "Wybierz język"</p>
+<button id="add_lang" type="button" arial-label="wybierz język">Wybierz język</button><br><br>
+<p arial-label="Wyślij kompletne dane">Wyślij kompletne dane do CV</p>
+<input type="submit" value="Wyślij kompletne dane" name="send"><br><br>
 
-<input type="submit" value="Wyślij kompletne dane" name="send"><input type="reset" value="Wyczyść"> 
 </div>
 </form>
 
