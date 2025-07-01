@@ -23,23 +23,23 @@ if($_SESSION['flaga']=="strona3"){
 
 <div id="this_field" class="this_field_in">  
     
-<h3>Języki programowania i technologie</h3>     
+<h2>Języki programowania i technologie</h2>     
     <label for="php" style="padding-right:38px">PHP       </label><input type="checkbox" name="php" id="php"><br>
     <label for="js"  >JavaScript</label><input type="checkbox" name="javascript" id="js"><br>
     <label for="html" style="padding-right:22px">HTML      </label><input type="checkbox" name="html" id="html"><br>
     <label for="css" style="padding-right:39px">CSS       </label><input type="checkbox" name="css" id="css"><br>
     Po zaznaczeniu dostępnych opcji języków programowania kliknij "Przejdź dalej"<br><br>
-<label>Przejdź dalej <button id="go" type="button">Przejdź dalej</button></label>
+    <button id="go" type="button">Przejdź dalej</button>
 </div>
 
 <div id="this_field2" class="this_field_out">
     
 <h3>Języki programowania i technologie</h3> 
 <label for="inny">Inny język</label><input type="checkbox" id="inny"><br><br>
-    <label for="inny">Wpisz inne języki programowania</label><input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog" id="inny"><br> 
-    <label>Dodaj kolejny język programowania<button type="button" class="other" style="display:none" id="add_prog">Dodaj</button></label><br>
-    Po dodaniu dodatkowych języków programowania klikni "Przejdź dalej"<br>
-<label>Przejdź dalej<button id="go2" type="button">Przejdź dalej</button></label>    
+    <label class="other" for="prog" style="display:none">Wpisz inne języki programowania </label><input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog">       
+    <button type="button" class="other" style="display:none" id="add_prog">Dodaj kolejny język programowania</button><br>
+    <p class="other" style="display:none">Po pisaniu wszystkich języków  programowania kliknij "Przejdź dalej"</p>
+<button id="go2" type="button">Przejdź dalej</button>
 </div>
 
 
@@ -57,21 +57,21 @@ if($_SESSION['flaga']=="strona3"){
 <h3>Języki programowania i technologie</h3>   
 <label for="inne_tech">Inna technologia</label><input type="checkbox" id="tech" id="inne_tech"><br>
     <label for="inna_tech"><input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none" id="inna_tech"></label>  <br><br>
-    <label>Dodaj kolejną technologię<button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj</button></label><br><br>
-    Po dodaniu dodatkowych technologii programowania klikni "Przejdź dalej"<br><br>
+   <button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj  kolejną technologię</button><br><br>
+ 
 <label>Przejdź dalej<button id="go4" type="button">Przejdź dalej</button>  
 </div>
 
 <div id="this_field5" class="this_field_out">
  
 <h3>Frameworki i środowiska:</h3>
-    <label for="Symfony">Symfony           </label><input type="checkbox" name="Symfony" id="Symfony">
-    <label for="Laravel">Laravel           </label><input type="checkbox" name="Laravel" id="Laravel">
-    <label for="visual" >Visual Studio 2022</label><input type="checkbox" name="Visual" id="visual">
-    <label for="android">Android Studio    </label><input type="checkbox" name="Android" id="android">
-    <label for="React"  >React             </label><input type="checkbox" name="React" id="React">
-    <label for="Angular">Angular           </label><input type="checkbox" name="Angular" id="Angular">
-    Po zaznaczeniu dostępnych opcji frameworków kliknij "Przejdź dalej"<br>
+    <label for="Symfony" style="padding-right:64px">Symfony           </label><input type="checkbox" name="Symfony" id="Symfony"><br>
+    <label for="Laravel" style="padding-right:74px">Laravel           </label><input type="checkbox" name="Laravel" id="Laravel"><br>
+    <label for="visual" >Visual Studio 2022</label><input type="checkbox" name="Visual" id="visual"><br>
+    <label for="android" style="padding-right:24px">Android Studio    </label><input type="checkbox" name="Android" id="android"><br>
+    <label for="React"  style="padding-right:87px">React             </label><input type="checkbox" name="React" id="React"><br>
+    <label for="Angular" style="padding-right:71px">Angular           </label><input type="checkbox" name="Angular" id="Angular"><br><br>
+    Po zaznaczeniu dostępnych opcji frameworków kliknij "Przejdź dalej"<br><br>
 <button id="go5" type="button">Przejdź dalej</button>  
 </div>
 

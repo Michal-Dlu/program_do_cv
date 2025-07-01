@@ -144,53 +144,53 @@ cos_tam5.change_class();
 const cos_tam6 = new Disappear(go6,this_field6,this_field7);
 cos_tam6.change_class();
 
+class Zmien{
+    obj1=[];
+    constructor(tag,obj1){
+        this.tag = tag;
+        this.obj1 = obj1;
+    }
+
+zmien(){
+    this.tag.addEventListener('change', () =>{
+        if(this.tag.checked){
+           this.obj1.forEach(element => {
+            element.style.display="inline";
+           });     
+        } 
+        else{this.obj1.forEach(element=> {
+            element.style.display="none";
+        });
+    }});
+}
+} 
+
 let zmienna = document.getElementById('inny');
-let inne = document.getElementsByClassName('other');
+let inne = document.querySelectorAll('.other');
 
 let tech = document.getElementById('tech');
-let other_tech = document.getElementsByClassName('other_tech');
+let other_tech = document.querySelectorAll('other_tech');
 
 let frame = document.getElementById('frame');
-let other_frame = document.getElementsByClassName('other_frame');
+let other_frame = document.querySelectorAll('other_frame');
 
 let skill = document.getElementById('skill');
-let other_skill = document.getElementsByClassName('other_skill');
+let other_skill = document.querySelectorAll('other_skill');
 
 
-zmienna.addEventListener('change', function(){
-if(inne[0].style.display=="none" && inne[1].style.display=="none"){
-    inne[0].style.display="inline";
-    inne[1].style.display="inline";}
+let zmiana = new Zmien(zmienna,inne);
+zmiana.zmien();
 
-else{inne[0].style.display="none";
-    inne[1].style.display="none";}
-}) 
+let zmiana1 = new Zmien(tech,other_tech);
+zmiana1.zmien();
 
-tech.addEventListener('change', function(){
-if(other_tech[0].style.display=="none" && other_tech[1].style.display=="none"){
-    other_tech[0].style.display="inline";
-    other_tech[1].style.display="inline";}
+let zmiana2 = new Zmien(frame,other_frame);
+zmiana2.zmien();
 
-else{other_tech[0].style.display="none";
-    other_tech[1].style.display="none";}
-}) 
-frame.addEventListener('change', function(){
-if(other_frame[0].style.display=="none" && other_frame[1].style.display=="none"){
-    other_frame[0].style.display="inline";
-    other_frame[1].style.display="inline";}
+let zmiana3 = new Zmien(skill, other_skill);
+zmiana3.zmien();
 
-else{other_frame[0].style.display="none";
-    other_frame[1].style.display="none";}
-}) 
-
-skill.addEventListener('change', function(){
-if(other_skill[0].style.display=="none" && other_skill[1].style.display=="none"){
-    other_skill[0].style.display="inline";
-    other_skill[1].style.display="inline";}
-
-else{other_skill[0].style.display="none";
-    other_skill[1].style.display="none";}
-})
+    
 
 class Language{
     constructor(obj, obj2){
