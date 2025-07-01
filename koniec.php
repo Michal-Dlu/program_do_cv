@@ -51,7 +51,7 @@ if (count($result)>0){
 <body id="end_body">
    <section id="tlo">
 <div id="question" class="this_field_out">
-<div id="decision"><h5 style="text-align:center">Czy chcesz poprawić dane w CV?</h5>
+<div id="decision"><h3 style="text-align:center">Czy chcesz poprawić dane w CV?</h3>
     <form action="Strona_1.php" method="post">   
         <input type="submit" id="correction" value="Chcę poprawić" style="width:150px" name="correct">
     </form>
@@ -59,9 +59,13 @@ if (count($result)>0){
 <div id="circle">X</div>
 </div>
         
-   <section id="person">
-   <h1><strong>Curriculum Vitae</strong></h1>
-  <h3>Dane osobowe</h3>   
+   
+    <header>
+    <h1><strong>Curriculum Vitae</strong></h1>
+    </header>
+    <main>
+    <section id="person">
+  <h2>Dane osobowe</h2>   
    <strong style="color:navy; font-size:35px;">
 <?php print "$name $surname";?></strong><br>
    <p style="word-wrap: break-word;">
@@ -69,7 +73,7 @@ if (count($result)>0){
 <?php print $adres ?><br>
 <?php print $email ?><br>
 <?php print $phone ?><br></p>
-  <h3>Profil zawodowy</h3>
+  <h2>Profil zawodowy</h2>
 <div style="width:60%" >
 <?php print "<p id='prof'>{$professional_profile}</p>";?>
 </div><br>
@@ -78,7 +82,7 @@ if (count($result)>0){
   
     </section>
     <section id="school">
- <h3>Wykształcenie</h3>
+ <h2>Wykształcenie</h2>
   <p>
 <?php
 $sql = "Select * from cv where id = ?";
@@ -117,7 +121,7 @@ while ($i < count($study)) {
 
     </section>
     <section id="experience">
-<h3>Doświadczenie zawodowe</h3>
+<h2>Doświadczenie zawodowe</h2>
 <p>
 <?php
 $sql = "Select * from doswiadczenie where cv = ? order by id desc";
@@ -147,9 +151,9 @@ while ($i < count($work)) {
 </p>
     </section>
     <section id="technical">
-<h3>Umiejętności techniczne</h3>
+<h2>Umiejętności techniczne</h2>
 <div class="pro">
-<h5 style="padding-top:5px">Języki programownia i technologie</h5>
+<h3 style="padding-top:5px">Języki programownia i technologie</h3>
 <p>
 <?php
 $sql = "Select * from programms where cv = ?";
@@ -175,7 +179,7 @@ while ($i < count($progr)) {
 </p>
 </div>
 <div class="pro">
-<h5 style="padding-top:5px">Frameworki i środowiska</h5>
+<h3 style="padding-top:5px">Frameworki i środowiska</h3>
 <p>
 <?php
 $sql = "Select * from frameworks where cv = ?";
@@ -201,7 +205,7 @@ while ($i < count($frame)){
 </div>
     </section>
     <section id="other" style="clear:both">
-<h3>Inne umiejętności</h3>
+<h2>Inne umiejętności</h2>
 <p>
 <?php
 $sql = "Select * from skills where cv = ?";
@@ -217,7 +221,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </p>
     </section>
     <section id="languages">
-<h3>Języki obce</h3>
+<h2>Języki obce</h2>
 <p>
 <?php
 $sql = "Select * from languages where cv = ?";
@@ -242,11 +246,14 @@ $pdo=null;}
 ?>
 </p>
     </section>
+    </main>
+    <footer>
 <p><strong>Zgoda na przetwarzanie danych</strong></p>
 <pre>   Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji
 procesu rekrutacji, zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679
 (RODO).
 </pre>
+</footer>
     </section>
 <script>
    class Show{
