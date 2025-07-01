@@ -117,12 +117,12 @@ print"
     <form action='skrypt.php' method='POST'><br>
     <fieldset> <legend>Popraw pozycję</legend>  
     
-    <input type='text' placeholder='Lata: ' name='study'  value='$study'><br> 
-    <input type='text' placeholder='Szkoła lub uczelnia' name='school'  value='$school'><br>
+    <label for='study'>Lata nauki: </label><input type='text' placeholder='Lata: ' name='study'  value='$study' aria-label='lata nauki'><br> 
+    <label for='school'>szkoła: </label><input type='text' placeholder='Szkoła lub uczelnia' name='school'  value='$school' id='school' aria-label='szkoła'><br>
 
-    <textarea placeholder='Opisz kierunek, tytuł naukowy' name='academic' >$academic</textarea><br>
+     <label for='academic'>Lata nauki: </label><textarea placeholder='Opisz kierunek, tytuł naukowy' name='academic' aria-label='opisz kierunek' id='academic'>$academic</textarea><br>
     
-    <input type='submit' value='Popraw' name='input_corr'><br><br><br>
+    <input type='submit' value='Popraw' name='input_corr' aria-label='popraw dane'><br><br><br>
     </fieldset>
 </form>";
 
