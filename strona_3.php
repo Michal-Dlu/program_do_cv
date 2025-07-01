@@ -24,12 +24,12 @@ print "
 <form method='post' action='skrypt.php'>
 <fieldset>
     <label for='work'>Lata pracy: </label><input type='text' placeholder='Lata: ' name='work' id='work' aria-label='lata pracy'><br> 
-    <label for='wor_place'>Zakład pracy: </label><input type='text' placeholder='Zakład pracy' name='work_place' id='work_place' aria-label='miejsce pracy'><br>
+    <label for='work_place'>Zakład pracy: </label><input type='text' placeholder='Zakład pracy' name='work_place' id='work_place' aria-label='miejsce pracy'><br>
     <label for='experience'>Zakres obowiązków: </label><textarea placeholder='Opisz zakres obowiązków' name='experience' id='experience' aria-label='zakres obowiązków'></textarea><br>
     <input type='submit' value='Dodaj kolejną pozycję' name='Add_experience' aria-label='dodaj kolejną pracę'><br><br>
     Po dodaniu już wszystkich pozycji doświadczenia zawodowego kliknij 'Przejdź dalej'<br><br>
     <input type='submit' value='Przejdź dalej' name='ok3' aria-label='przejdź dalej'><br><br>
-    <input type='reset' value='Wyczyść wpisane dane' aria-label='wyczyść wpisane dane'>
+    <label>Wyczyść wpisane dane<input type='reset' value='Wyczyść wpisane dane' aria-label='wyczyść wpisane dane'></label>
 </fieldset> 
 </form>
 ";}
@@ -37,9 +37,6 @@ print "
 else{header('location:Strona_1.php');}
 exit();
 }
-
-
-
 
 if(isset($_SESSION['corr']) && isset($_SESSION['flaga'])){
   if($_SESSION['flaga']=="strona2") {
@@ -64,7 +61,7 @@ if(isset($_SESSION['corr']) && isset($_SESSION['flaga'])){
     Zmień liniję: <br><br>
 <form action="" method="POST"> 
         <fieldset><legend>Poraw wcześniejszy wpis</legend>
-        <select name="del" style="font-size:10px;" id="corr_select">';
+        <label for="correction">Wybierz do poprawy</label><select name="del" style="font-size:10px;" id="corr_select" aria-label="wybierz do poprawy" id="correction">';
         while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
         $id= $result['id'];
         $work = $result['work'];
@@ -85,13 +82,13 @@ if(isset($_SESSION['corr']) && isset($_SESSION['flaga'])){
 print '<form action="skrypt.php" method="POST">
     <fieldset>
     <legend>Dodaj kolejną pozycję</legend>  
-    <label for="work">Lata pracy: </label><input type="text" placeholder="Lata: " name="work" id="work" aria-label="lata pracy"><br> 
-    <label for="work_place">Zakład pracy: </label><input type="text" placeholder="Zakład pracy" name="work_place" id="work_place" aria-label="miejsce pracy"><br>
-    <label for="experience">Zakres obowiązaków: </label><textarea placeholder="Opisz zakres obowiązków " name="experience" id="experience" aria-label="zakres obowiązków"></textarea>
+    <label for="work0">Lata pracy: </label><input type="text" placeholder="Lata: " name="work" id="work0" aria-label="lata pracy"><br> 
+    <label for="work_place0">Zakład pracy: </label><input type="text" placeholder="Zakład pracy" name="work_place" id="work_place0" aria-label="miejsce pracy"><br>
+    <label for="experience0">Zakres obowiązaków: </label><textarea placeholder="Opisz zakres obowiązków " name="experience" id="experience0" aria-label="zakres obowiązków"></textarea>
     <input type="submit" value="Dodaj kolejną pozycję" name="add_next_experience" aria-label="dodaj kolejną pracę"><br><br>
     Po dodaniu już wszystkich pozycji doświadczenia zawodowego kliknij "Przejdź dalej"<br><br>
     <input type="submit" value="Przejdź dalej" name="next_ok" aria-label="przejdź dalej"><br><br>
-    <input type="reset" value="Wyczyść wpisane dane" aria-label="wyczyść wpisane dane"> 
+    <label>Wyczyść wpisane dane<input type="reset" value="Wyczyść wpisane dane" aria-label="wyczyść wpisane dane"></label> 
     </fieldset> 
     </form>';
 
@@ -116,9 +113,9 @@ print"
 <form method='post' action='skrypt.php'>
 <fieldset>
 <legend>Poraw wcześniejszy wpis</legend>
-    <label for='work'>Lata pracy: </label><input type='text' placeholder='Lata: ' name='work' value='$work' id='work' aria-label='lata pracy'><br> 
-    <label for='work_place'>Miejsce pracy: </label><input type='text' placeholder='Zakład pracy' name='work_place' value='$work_place' aria-label='miejsce pracy' id='work_place'><br>
-    <label for='experience'>Opisz zakres obowiązków: </label><textarea placeholder='Opisz zakres obowiązków' name='experience' id='experience' aria-label='zakres obowiązków'>$experience</textarea>
+    <label for='work1'>Lata pracy: </label><input type='text' placeholder='Lata: ' name='work' value='$work' id='work1' aria-label='lata pracy'><br> 
+    <label for='work_place1'>Miejsce pracy: </label><input type='text' placeholder='Zakład pracy' name='work_place' value='$work_place' aria-label='miejsce pracy' id='work_place1'><br>
+    <label for='experience1'>Opisz zakres obowiązków: </label><textarea placeholder='Opisz zakres obowiązków' name='experience' id='experience1' aria-label='zakres obowiązków'>$experience</textarea>
   
     <input type='submit' value='Popraw' name='input_correct' aria-label='popraw dane'>
 </fieldset>
@@ -132,7 +129,3 @@ else{ header('location:Strona_1.php');}
 </main>
 </body>
 </html>
-
-
-
-

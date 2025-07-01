@@ -30,7 +30,7 @@ print'
     <input type="submit" value="Dodaj kolejną szkołę" name="Add_data" aria-label="Dodaj kolejną szkołę"><br><br>
     Gdy wszystkie szkoły już zostały dodane kliknij wyślij<br><br>
     <input type="submit" value="Przejdź dalej" name="ok1" aria-label="Zatwierdź i przejdź dalej"><br><br>
-    <input type="reset" value="Wyczyść" aria-label="wyczyść wpisane dane"> 
+    <label>Wyczyść wpisane dane<input type="reset" value="Wyczyść" aria-label="wyczyść wpisane dane"></label> 
     </fieldset> 
     </form>
 </main>
