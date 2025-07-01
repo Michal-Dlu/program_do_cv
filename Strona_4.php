@@ -55,9 +55,10 @@ if($_SESSION['flaga']=="strona3"){
 <div id="this_field4" class="this_field_out">
  
 <h2>Języki programowania i technologie</h2>   
-<label for="inne_tech">Inna technologia</label><input type="checkbox" id="tech" id="inne_tech"><br><br>
-    <label for="inna_tech"><input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none" id="inna_tech"></label><br><br>
-   <button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj  kolejną technologię</button><br><br>
+<label for="tech">Inna technologia</label><input type="checkbox" id="tech"><br><br>
+    <label for="other_technol" class="other_tech" style="display:none">Wpisz inne technologie</label>
+    <input type="text" id="other_technol" placeholder="Wpisz inne technologie" class="other_tech" style="display:none"><br><br>
+   <button type="button" id="next_tech" class="other_tech" style="display:none">Dodaj  kolejną technologię</button><br><br>
  <button id="go4" type="button">Przejdź dalej</button>
 </div>
 
@@ -79,15 +80,15 @@ if($_SESSION['flaga']=="strona3"){
 
 <h2>Frameworki i środowiska:</h2>
 
-<label>Inny framework</label><input type="checkbox" id="frame"><br>
+<label for="frame">Inny framework</label><input type="checkbox" id="frame"><br>
     <label for="this_frame" style="display:none" class="other_frame">Wpisz inne frameworki </label><input type="text" id="this_frame" placeholder="Inne frameworki" style="display:none" class="other_frame">
     <button type="button" id="next_frame" class="other_frame" style="display:none">Dodaj inny framework</button><br> 
 
-<label>Inne umiejętności</label><input type="checkbox" id="skill"><br>   
+<label for="skill">Inne umiejętności</label><input type="checkbox" id="skill"><br>   
     <label for="this_skill" class="other_skill" style="display:none">Wpisz inne umiejętności </label><input type="text" id="this_skill" placeholder="Inne umiejętności" class="other_skill" style="display:none">
-    <button type="button" id="next_skill" class="other_skill" style="display:none">Dodaj inną umiejętność</button> 
+    <button type="button" id="next_skill" class="other_skill" style="display:none">Dodaj inną umiejętność</button><br> 
 
-<button id="go6" type="button">Dalej</button>
+<button id="go6" type="button">Przejdź dalej</button>
 </div>
 
 <div id="this_field7" class="this_field_out">
@@ -200,12 +201,12 @@ if($_SESSION['flaga']=="strona3"){
      
 
 print'
-    <label>PHP</label><input type="checkbox" name="php" value="PHP" '.$php.'><br>
-    <label>JavaScript</label><input type="checkbox" name="javascript" value="JavaScript" '.$js.'><br>
-    <label>HTML</label><input type="checkbox" name="html" value="HTML" '.$html.'><br>
-    <label>CSS</label><input type="checkbox" name="css" value="CSS" '.$css.'><br>
-    <label>MySQL</label><input type="checkbox" name="mysql" value="MySQL" '.$mysql.'><br>
-   <label>PostgreSQL</label><input type="checkbox" name="postgresql" value="PostgreSQL" '.$postg.'><br>';
+    <label for="php1">PHP</label><input type="checkbox" name="php" value="PHP" '.$php.' id="php1"><br>
+    <label for="js1">JavaScript</label><input type="checkbox" name="javascript" value="JavaScript" '.$js.' id="js1"><br>
+    <label for="html1">HTML</label><input type="checkbox" name="html" value="HTML" '.$html.' id="html1"><br>
+    <label for="css1">CSS</label><input type="checkbox" name="css" value="CSS" '.$css.' id="css1"><br>
+    <label for="mysql1">MySQL</label><input type="checkbox" name="mysql" value="MySQL" '.$mysql.' id="mysql1"><br>
+   <label for="postgresql1">PostgreSQL</label><input type="checkbox" name="postgresql" value="PostgreSQL" '.$postg.' id="postgresql1"><br>';
 
     if(isset($_SESSION['add_prog'])){
     if(!empty($_SESSION['add_prog'])){
@@ -224,7 +225,7 @@ $stmt->execute($params);}}}
         while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
             
         if(!in_array($result['progr'],["PHP","JavaScript","HTML","CSS","MySQL","PostgreSQL"])) {
-           print '<label>' . $result["progr"] . '</label><input type="checkbox" name="prog['.$i.']" value="' . $result["progr"] . '" checked><br>';
+           print '<label for="'.$result["progr"].'">' . $result["progr"] . '</label><input type="checkbox" name="prog['.$i.']" value="'.$result["progr"].'" checked id="'.$result["progr"].'"><br>';
           $i++;
         }}  
         
@@ -254,12 +255,12 @@ while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
    if($frame=="Angular")$ag="checked";}
     
     
-   print '<label>Symfony</label><input type="checkbox" name="symfony" value="Symfony" '.$sf.'><br>
-    <label>Laravel</label><input type="checkbox" name="laravel" value="Laravel" '.$lv.'><br>
-    <label>Visual Studio 2022</label><input type="checkbox" name="visual" value="Visual Studio 2022" '.$vis.'><br>
-    <label>Android Studio</label><input type="checkbox" name="android" value="Android Studio" '.$ar.'><br>
-    <label>React</label><input type="checkbox" name="react" value="React" '.$ra.'><br>
-    <label>Angular</label><input type="checkbox" name="angular" value="Angular" '.$ag.'><br>';
+   print '<label for="sf">Symfony</label><input type="checkbox" name="symfony" value="Symfony" '.$sf.' id="sf"><br>
+    <label for="lv">Laravel</label><input type="checkbox" name="laravel" value="Laravel" '.$lv.' id="lv"><br>
+    <label for="vis">Visual Studio 2022</label><input type="checkbox" name="visual" value="Visual Studio 2022" '.$vis.' id="vis"><br>
+    <label for="ar">Android Studio</label><input type="checkbox" name="android" value="Android Studio" '.$ar.' id="ar"><br>
+    <label for="ra">React</label><input type="checkbox" name="react" value="React" '.$ra.' id="ra"><br>
+    <label for="ag1">Angular</label><input type="checkbox" name="angular" value="Angular" '.$ag.' id="ag1 "><br>';
 
     $sql = "Select * from frameworks where cv = ?";
     $params = [$_SESSION['id']];
@@ -268,7 +269,7 @@ while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
         $j = 0;        
     while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
      if(!in_array($result['frame'],["Symfony","Laravel","Visual Studio 2022","Android Studio","React","Angular"])){
-        print '<label>'.$result['frame'].'</label><input type="checkbox" name="frame['.$j.']" value="'.$result['frame'].'" checked><br>';
+        print '<label for="'.$result['frame'].'">'.$result['frame'].'</label><input type="checkbox" name="frame['.$j.']" value="'.$result['frame'].'" checked id="'.$result['frame'].'"><br>';
         $j++;
      }    
     }
@@ -289,7 +290,7 @@ $sql = "Select * from skills where cv = ?";
   $k=0;  
 while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
     if(!empty($result['id'])>0){
-print '<label>'.$result["skill"].'</label><input type="checkbox" name="skill['.$k.']" value="'.$result["skill"].'" checked><br>';
+    print '<label for="'.$result["skill"].'">'.$result["skill"].'</label><input type="checkbox" name="skill['.$k.']" value="'.$result["skill"].'" checked id="'.$result["skill"].'"><br>';
 $k++;
 }
 else{

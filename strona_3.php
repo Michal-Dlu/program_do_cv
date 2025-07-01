@@ -24,8 +24,8 @@ print "
 <main>
 <form method='post' action='skrypt.php'>
 <fieldset><legend>Formularz doświadczenia zawodowego</legend>
-    <label for='work'>Lata pracy: </label><input type='text' placeholder='Lata: ' name='work' id='work' aria-label='lata pracy'><br> 
-    <label for='work_place'>Zakład pracy: </label><input type='text' placeholder='Zakład pracy' name='work_place' id='work_place' aria-label='miejsce pracy'><br>
+    <label for='work'>Lata pracy: </label><input type='text' placeholder='Lata: ' name='work' id='work' aria-label='lata pracy'><br><br> 
+    <label for='work_place'>Zakład pracy: </label><input type='text' placeholder='Zakład pracy' name='work_place' id='work_place' aria-label='miejsce pracy'><br><br>
     <label for='experience'>Zakres obowiązków: </label><textarea placeholder='Opisz zakres obowiązków' name='experience' id='experience' aria-label='zakres obowiązków'></textarea><br>
     <input type='submit' value='Dodaj kolejną pozycję' name='Add_experience' aria-label='dodaj kolejną pracę'><br><br>
     Po dodaniu już wszystkich pozycji doświadczenia zawodowego kliknij 'Przejdź dalej'<br><br>

@@ -158,24 +158,26 @@ zmien(){
             element.style.display="inline";
            });     
         } 
-        else{this.obj1.forEach(element=> {
+        else{
+            this.obj1.forEach(element=> {
             element.style.display="none";
         });
-    }});
+            }
+        });
+    }
 }
-} 
 
 let zmienna = document.getElementById('inny');
 let inne = document.querySelectorAll('.other');
 
 let tech = document.getElementById('tech');
-let other_tech = document.querySelectorAll('other_tech');
+let other_tech = document.querySelectorAll('.other_tech');
 
 let frame = document.getElementById('frame');
-let other_frame = document.querySelectorAll('other_frame');
+let other_frame = document.querySelectorAll('.other_frame');
 
 let skill = document.getElementById('skill');
-let other_skill = document.querySelectorAll('other_skill');
+let other_skill = document.querySelectorAll('.other_skill');
 
 
 let zmiana = new Zmien(zmienna,inne);
@@ -201,10 +203,12 @@ class Language{
             this.tag.addEventListener('change', () => {
                 if (this.tag2.className == "this_field_out"){
                 this.tag2.classList.remove('this_field_out');
-                this.tag2.classList.add('this_field_in');}
+                this.tag2.classList.add('this_field_in');
+               }
                 else {
                     this.tag2.classList.remove('this_field_in');
                     this.tag2.classList.add('this_field_out');
+                 
                 }
             }
         )            
