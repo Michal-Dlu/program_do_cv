@@ -28,9 +28,9 @@ print'
     <label for="school">Nazwa szkoły lub uczelni: </label><input type="text" placeholder="Szkoła lub uczelnia" name="school" id="school" aria-label="nazwa szkoły"><br><br>
     <label for="academic">Opis kierunku nauki: </label><textarea placeholder="Opisz kierunek, tytuł naukowy" name="academic" id="academic" aria-label="opis kierunku"></textarea>
     <input type="submit" value="Dodaj kolejną szkołę" name="Add_data" aria-label="Dodaj kolejną szkołę"><br><br>
-    Gdy wszystkie szkoły już zostały dodane kliknij wyślij<br><br>
-    <input type="submit" value="Przejdź dalej" name="ok1" aria-label="Zatwierdź i przejdź dalej"><br><br>
-    <label>Wyczyść wpisane dane<input type="reset" value="Wyczyść" aria-label="wyczyść wpisane dane"></label> 
+    Gdy wszystkie szkoły już zostały dodane kliknij "Przejdź dalej"<br><br>
+    <input type="submit" value="Przejdź dalej" name="ok1" aria-label="Przejdź dalej"><br><br>
+    <label>Wyczyść wpisane dane<input type="reset" value="Wyczyść pisane dane" aria-label="wyczyść wpisane dane"></label> 
     </fieldset> 
     </form>
 </main>
@@ -90,8 +90,8 @@ print '<form action="skrypt.php" method="POST">
     <label for="school">Nazwa szkoły lub uczelni: </label><input type="text" placeholder="Szkoła lub uczelnia" name="school" id="school" aria-label="nazwa szkoły"><br>
     <label for="academic">Opis kierunku nauki: </label><textarea placeholder="Opisz kierunek, tytuł naukowy" name="academic" id="academic" aria-label="opis kierunku"></textarea>
     <input type="submit" value="Dodaj kolejną szkołę" name="Add_next_data" aria-label="dodaj kolejną szkołę"><br><br>
-    Gdy wszystkie szkoły już zostały dodane kliknij wyślij<br><br>
-    <input type="submit" value="Przejdź dalej" name="next_ok1" aria-label="Zatwierdź i przejdź dalej"><br><br>
+    Gdy wszystkie szkoły już zostały dodane kliknij "Przejdź dalej"<br><br>
+    <input type="submit" value="Przejdź dalej" name="next_ok1" aria-label="przejdź dalej"><br><br>
     <input type="reset" value="Wyczyść" aria-label="wyczyść wpisane dane"> 
     </fieldset> 
     </form>';
