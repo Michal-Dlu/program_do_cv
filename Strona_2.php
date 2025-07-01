@@ -60,13 +60,14 @@ else if(isset($_SESSION['corr']) && isset($_SESSION['flaga'])){
     $i=1;
     print 
     '
+    <header>
     <h1>Wykształcenie</h1>  
-
-    Zmień liniję: <br><br>
+    </header>
+  <main>
 <form action="" method="POST"> 
         <fieldset>
         <legend>Wybierz wcześniejsze wpisy do poprawy</legend>
-        <select name="del" style="font-size:10px;" id="corr_select">';
+        <label for="corr_select">Wybierz wpis do poprawy</label><select name="del" style="font-size:10px;" id="corr_select">';
     while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
         $id= $result['id'];
         $study = $result['study'];

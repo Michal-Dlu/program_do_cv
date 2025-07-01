@@ -175,9 +175,22 @@ if($_SESSION['flaga']=="strona3"){
     
    //programs 
     print'
-    <form action="skrypt.php" method="post">
-    <h3>Języki programowania i technologie</h3>';
-
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze umiejętności technicznych apilkacji CV</title>
+    <meta name="author" content="Michał Dłubak">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>Poprawa umiejętności technicznych, innych umiejętności i języków obcych</h1>
+    </header>
+    <main>
+    <h2>Języki programowania i technologie</h2>
+    <form action="skrypt.php" method="post">';
     
 
     $sql="Select * from programms where cv = ?";
@@ -260,7 +273,7 @@ while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
     <label for="vis">Visual Studio 2022</label><input type="checkbox" name="visual" value="Visual Studio 2022" '.$vis.' id="vis"><br>
     <label for="ar">Android Studio</label><input type="checkbox" name="android" value="Android Studio" '.$ar.' id="ar"><br>
     <label for="ra">React</label><input type="checkbox" name="react" value="React" '.$ra.' id="ra"><br>
-    <label for="ag1">Angular</label><input type="checkbox" name="angular" value="Angular" '.$ag.' id="ag1 "><br>';
+    <label for="ag">Angular</label><input type="checkbox" name="angular" value="Angular" '.$ag.' id="ag"><br>';
 
     $sql = "Select * from frameworks where cv = ?";
     $params = [$_SESSION['id']];
@@ -435,6 +448,7 @@ print '</select><br><br>';
 print '<br><br>';
 print "<input type='submit' value='Popraw dane' name='end'>";
 print '</form>';
+print '</main></body></html>';
 }}
 
 

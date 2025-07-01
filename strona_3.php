@@ -58,11 +58,14 @@ if(isset($_SESSION['corr']) && isset($_SESSION['flaga'])){
     $stmt=$pdo->prepare($sql);
     $stmt->execute($params);
     $i=1;
-    print '<h1>Doświadczenie zawodowe</h1>
-    Zmień liniję: <br><br>
+    print '
+    <header>
+    <h1>Doświadczenie zawodowe</h1>
+    </header>
+    <main>
 <form action="" method="POST"> 
         <fieldset><legend>Poraw wcześniejszy wpis</legend>
-        <label for="correction">Wybierz do poprawy</label><select name="del" style="font-size:10px;" id="corr_select" aria-label="wybierz do poprawy" id="correction">';
+        <label for="corr_select">Wybierz do poprawy</label><select name="del" style="font-size:10px;" id="corr_select" aria-label="wybierz do poprawy" >';
         while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
         $id= $result['id'];
         $work = $result['work'];
@@ -121,6 +124,7 @@ print"
     <input type='submit' value='Popraw' name='input_correct' aria-label='popraw dane'>
 </fieldset>
 </form>
+
 ";}    
   }else{header('location:Strona_1.php');}
 }

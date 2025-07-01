@@ -216,7 +216,7 @@ class Language{
         };
 
 
-let l_ang = document.getElementById('l_ang');
+
 
 let langA = new Language(ang, l_ang);
 langA.change_class1();
@@ -235,5 +235,5 @@ let angielski = new Send_options(add_lang);
 angielski.send();
 
 
- 
+ //let l_ang = document.getElementById('l_ang');
 
