@@ -24,12 +24,13 @@ print'
 <main>
     <form action="skrypt.php" method="POST">
     <fieldset> <legend>Formularz wykształcenia</legend> 
-    <input type="text" placeholder="Lata: " name="study"><br> 
-    <input type="text" placeholder="Szkoła lub uczelnia" name="school"><br>
-    <textarea placeholder="Opisz kierunek, tytuł naukowy" name="academic"></textarea>
-    <input type="submit" value="Dodaj kolejną szkołę" name="Add_data"><br><br>
+    <label for="years">Lata nauki </label><input type="text" placeholder="Lata: " name="study" id="years" aria-label="Lata nauki"><br><br> 
+    <label for="school">Nazwa szkoły lub uczelni: </label><input type="text" placeholder="Szkoła lub uczelnia" name="school" id="school" aria-label="nazwa szkoły"><br><br>
+    <label for="academic">Opis kierunku nauki: </label><textarea placeholder="Opisz kierunek, tytuł naukowy" name="academic" id="academic" aria-label="opis kierunku"></textarea>
+    <input type="submit" value="Dodaj kolejną szkołę" name="Add_data" aria-label="Dodaj kolejną szkołę"><br><br>
     Gdy wszystkie szkoły już zostały dodane kliknij wyślij<br><br>
-    <input type="submit" value="Przejdź dalej" name="ok1"><input type="reset" value="Wyczyść"> 
+    <input type="submit" value="Przejdź dalej" name="ok1" aria-label="Zatwierdź i przejdź dalej"><br><br>
+    <input type="reset" value="Wyczyść" aria-label="wyczyść wpisane dane"> 
     </fieldset> 
     </form>
 </main>
@@ -85,12 +86,13 @@ else if(isset($_SESSION['corr']) && isset($_SESSION['flaga'])){
 print '<form action="skrypt.php" method="POST">
     <fieldset>
     <legend>Dodaj kolejną pozycję</legend>  
-    <input type="text" placeholder="Lata: " name="study"><br> 
-    <input type="text" placeholder="Szkoła lub uczelnia" name="school"><br>
-    <textarea placeholder="Opisz kierunek, tytuł naukowy" name="academic"></textarea>
-    <input type="submit" value="Dodaj kolejną szkołę" name="Add_next_data"><br><br>
+    <label for="years">Lata nauki </label><input type="text" placeholder="Lata: " name="study" id="years" aria-label="lata nauki"><br> 
+    <label for="school">Nazwa szkoły lub uczelni: </label><input type="text" placeholder="Szkoła lub uczelnia" name="school" id="school" aria-label="nazwa szkoły"><br>
+    <label for="academic">Opis kierunku nauki: </label><textarea placeholder="Opisz kierunek, tytuł naukowy" name="academic" id="academic" aria-label="opis kierunku"></textarea>
+    <input type="submit" value="Dodaj kolejną szkołę" name="Add_next_data" aria-label="dodaj kolejną szkołę"><br><br>
     Gdy wszystkie szkoły już zostały dodane kliknij wyślij<br><br>
-    <input type="submit" value="Przejdź dalej" name="next_ok1"><input type="reset" value="Wyczyść"> 
+    <input type="submit" value="Przejdź dalej" name="next_ok1" aria-label="Zatwierdź i przejdź dalej"><br><br>
+    <input type="reset" value="Wyczyść" aria-label="wyczyść wpisane dane"> 
     </fieldset> 
     </form>';
 

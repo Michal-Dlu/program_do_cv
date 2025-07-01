@@ -21,9 +21,9 @@ print "
 
 <form method='post' action='skrypt.php'>
 <fieldset>
-    <input type='text' placeholder='Lata: ' name='work'><br> 
-    <input type='text' placeholder='Zakład pracy' name='work_place'><br>
-    <textarea placeholder='Opisz zakres obowiązków' name='experience'></textarea><br>
+    <label for='work'>Lata pracy: </label><input type='text' placeholder='Lata: ' name='work' id='work'><br> 
+    <label for='wor_place'>Zakład pracy: </label><input type='text' placeholder='Zakład pracy' name='work_place' id='work_place'><br>
+    <label for='experience'>Zakres obowiązków: </label><textarea placeholder='Opisz zakres obowiązków' name='experience' id='experience'></textarea><br>
     <input type='submit' value='Dodaj kolejną pozycję' name='Add_experience'><br><br>
     Po dodaniu już wszystkich pozycji doświadczenia zawodowego kliknij 'Wyślij'<br><br>
     <input type='submit' value='Wyślij' name='ok3'><input type='reset' value='Wyczyść'>
@@ -79,9 +79,9 @@ if(isset($_SESSION['corr']) && isset($_SESSION['flaga'])){
 print '<form action="skrypt.php" method="POST">
     <fieldset>
     <legend>Dodaj kolejną pozycję</legend>  
-    <input type="text" placeholder="Lata: " name="work"><br> 
-    <input type="text" placeholder="Zakład pracy" name="work_place"><br>
-    <textarea placeholder="Opisz zakres obowiązków " name="experience"></textarea>
+    <label for="work">Lata pracy: </label><input type="text" placeholder="Lata: " name="work" id="work"><br> 
+    <label for="work_place">Zakład pracy: </label><input type="text" placeholder="Zakład pracy" name="work_place" id="work_place"><br>
+    <label for="experience">Zakres obowiązaków: </label><textarea placeholder="Opisz zakres obowiązków " name="experience" id="experience"></textarea>
     <input type="submit" value="Dodaj kolejną pozycję" name="add_next_experience"><br><br>
     Po dodaniu już wszystkich pozycji doświadczenia zawodowego kliknij "Przejdź dalej"<br><br>
     <input type="submit" value="Przejdź dalej" name="next_ok"><input type="reset" value="Wyczyść"> 

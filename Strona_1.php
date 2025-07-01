@@ -27,7 +27,7 @@ unset($_SESSION['programsData']);
     $phone="";
     $professional_profile="";
     $val="Wyślij";
-    $input="<label for='reset'>Wyczyść dane formularza</label><input type='reset' value='Wyczyść' id='reset'  >";
+    $input="<label for='reset'>Wyczyść dane formularza</label><input type='reset' value='Wyczyść' id='reset'>";
     $inp_name="ok";
     $password ="";
     $disabled="";
