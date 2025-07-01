@@ -28,16 +28,16 @@ if($_SESSION['flaga']=="strona3"){
     <label for="js"  >JavaScript</label><input type="checkbox" name="javascript" id="js"><br>
     <label for="html" style="padding-right:22px">HTML      </label><input type="checkbox" name="html" id="html"><br>
     <label for="css" style="padding-right:39px">CSS       </label><input type="checkbox" name="css" id="css"><br>
-    Po zaznaczeniu dostępnych opcji języków programowania kliknij "Przejdź dalej"<br>
-<label>Przejdź dalej<button id="go" type="button">Przejdź dalej</button></label>
+    Po zaznaczeniu dostępnych opcji języków programowania kliknij "Przejdź dalej"<br><br>
+<label>Przejdź dalej <button id="go" type="button">Przejdź dalej</button></label>
 </div>
 
 <div id="this_field2" class="this_field_out">
     
 <h3>Języki programowania i technologie</h3> 
-<label for="inny">Inny język</label><input type="checkbox" id="inny">
-    <label for="inny">Wpisz inne języki programowania</label><input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog" id="inny"> 
-    <label>Dodaj kolejny język programowania<button type="button" class="other" style="display:none" id="add_prog">Dodaj</button></label>
+<label for="inny">Inny język</label><input type="checkbox" id="inny"><br><br>
+    <label for="inny">Wpisz inne języki programowania</label><input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog" id="inny"><br> 
+    <label>Dodaj kolejny język programowania<button type="button" class="other" style="display:none" id="add_prog">Dodaj</button></label><br>
     Po dodaniu dodatkowych języków programowania klikni "Przejdź dalej"<br>
 <label>Przejdź dalej<button id="go2" type="button">Przejdź dalej</button></label>    
 </div>
@@ -46,19 +46,19 @@ if($_SESSION['flaga']=="strona3"){
 <div id="this_field3"  class="this_field_out">
 
 <h3>Języki programowania i technologie</h3>   
-    <label for="mysql"     >MySQL     </label><input type="checkbox" name="mysql" id="mysql">    
-    <label for="postgresql">PostgreSQL</label><input type="checkbox" name="postgresql" id="postgresql">
-    Po zaznaczeniu dostępnych opcji technologii kliknij "Przejdź dalej"<br>
+    <label for="mysql" style="padding-right:26px">MySQL     </label><input type="checkbox" name="mysql" id="mysql"><br>    
+    <label for="postgresql">PostgreSQL</label><input type="checkbox" name="postgresql" id="postgresql"><br><br>
+    Po zaznaczeniu dostępnych opcji technologii kliknij "Przejdź dalej"<br><br>
 <label>Przejdź dalej<button id="go3" type="button">Przejdź dalej</button></label>
 </div>
 
 <div id="this_field4" class="this_field_out">
  
 <h3>Języki programowania i technologie</h3>   
-<label for="inne_tech">Inna technologia</label><input type="checkbox" id="tech" id="inne_tech">
-    <label for="inna_tech"<input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none" id="inna_tech">    
-    <label>Dodaj kolejną technologię<button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj</button></label>
-    Po dodaniu dodatkowych technologii programowania klikni "Przejdź dalej"<br>
+<label for="inne_tech">Inna technologia</label><input type="checkbox" id="tech" id="inne_tech"><br>
+    <label for="inna_tech"><input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none" id="inna_tech"></label>  <br><br>
+    <label>Dodaj kolejną technologię<button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj</button></label><br><br>
+    Po dodaniu dodatkowych technologii programowania klikni "Przejdź dalej"<br><br>
 <label>Przejdź dalej<button id="go4" type="button">Przejdź dalej</button>  
 </div>
 
