@@ -10,67 +10,69 @@ if($_SESSION['flaga']=="strona3"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formularze umiejętności technicznych apilkacji CV</title>
+    <meta name="author" content="Michał Dłubak">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
 <h1>Umiejętności techniczne</h1>
+</header>
+<main>
 <form method="post" action="skrypt.php" >
 
 <div id="this_field" class="this_field_in">  
     
 <h3>Języki programowania i technologie</h3>     
-    <label>PHP</label><input type="checkbox" name="php" ><br>
-    <label>JavaScript</label><input type="checkbox" name="javascript"><br>
-    <label>HTML</label><input type="checkbox" name="html"><br>
-    <label>CSS</label><input type="checkbox" name="css"><br>
-<button id="go" type="button">Dalej</button>    
-    
+    <label for="php" style="padding-right:38px">PHP       </label><input type="checkbox" name="php" id="php"><br>
+    <label for="js"  >JavaScript</label><input type="checkbox" name="javascript" id="js"><br>
+    <label for="html" style="padding-right:22px">HTML      </label><input type="checkbox" name="html" id="html"><br>
+    <label for="css" style="padding-right:39px">CSS       </label><input type="checkbox" name="css" id="css"><br>
+    Po zaznaczeniu dostępnych opcji języków programowania kliknij "Przejdź dalej"<br>
+<label>Przejdź dalej<button id="go" type="button">Przejdź dalej</button></label>
 </div>
-
-
 
 <div id="this_field2" class="this_field_out">
     
 <h3>Języki programowania i technologie</h3> 
 <label for="inny">Inny język</label><input type="checkbox" id="inny">
-    <input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog"> 
-    <button type="button" class="other" style="display:none" id="add_prog">Dodaj</button> 
-<button id="go2" type="button">Przejdź dalej</button>
-    
+    <label for="inny">Wpisz inne języki programowania</label><input type="text" placeholder="Wpisz inne języki programowania" class="other" style="display:none" id="prog" id="inny"> 
+    <label>Dodaj kolejny język programowania<button type="button" class="other" style="display:none" id="add_prog">Dodaj</button></label>
+    Po dodaniu dodatkowych języków programowania klikni "Przejdź dalej"<br>
+<label>Przejdź dalej<button id="go2" type="button">Przejdź dalej</button></label>    
 </div>
 
 
 <div id="this_field3"  class="this_field_out">
 
 <h3>Języki programowania i technologie</h3>   
-    <label>MySQL</label><input type="checkbox" name="mysql">    
-    <label>PostgreSQL</label><input type="checkbox" name="postgresql">
-<button id="go3" type="button">Dalej</button>
-
+    <label for="mysql"     >MySQL     </label><input type="checkbox" name="mysql" id="mysql">    
+    <label for="postgresql">PostgreSQL</label><input type="checkbox" name="postgresql" id="postgresql">
+    Po zaznaczeniu dostępnych opcji technologii kliknij "Przejdź dalej"<br>
+<label>Przejdź dalej<button id="go3" type="button">Przejdź dalej</button></label>
 </div>
 
 <div id="this_field4" class="this_field_out">
  
 <h3>Języki programowania i technologie</h3>   
-<label>Inna technologia</label><input type="checkbox" id="tech" >
-    <input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none">
-    <button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj</button>
-<button id="go4" type="button">Dalej</button>
-  
+<label for="inne_tech">Inna technologia</label><input type="checkbox" id="tech" id="inne_tech">
+    <label for="inna_tech"<input type="text"  id="other_technology" placeholder="Wpisz inne technologie" class="other_tech" style="display:none" id="inna_tech">    
+    <label>Dodaj kolejną technologię<button type="button"  id="next_tech" class="other_tech" style="display:none">Dodaj</button></label>
+    Po dodaniu dodatkowych technologii programowania klikni "Przejdź dalej"<br>
+<label>Przejdź dalej<button id="go4" type="button">Przejdź dalej</button>  
 </div>
 
 <div id="this_field5" class="this_field_out">
  
 <h3>Frameworki i środowiska:</h3>
-    <label>Symfony</label><input type="checkbox" name="Symfony">
-    <label>Laravel</label><input type="checkbox" name="Laravel">
-    <label>Visual Studio 2022</label><input type="checkbox" name="Visual">
-    <label>Android Studio</label><input type="checkbox" name="Android">
-    <label>React</label><input type="checkbox" name="React">
-    <label>Angular</label><input type="checkbox" name="Angular">
-<button id="go5" type="button">Dalej</button>
-  
+    <label for="Symfony">Symfony           </label><input type="checkbox" name="Symfony" id="Symfony">
+    <label for="Laravel">Laravel           </label><input type="checkbox" name="Laravel" id="Laravel">
+    <label for="visual" >Visual Studio 2022</label><input type="checkbox" name="Visual" id="visual">
+    <label for="android">Android Studio    </label><input type="checkbox" name="Android" id="android">
+    <label for="React"  >React             </label><input type="checkbox" name="React" id="React">
+    <label for="Angular">Angular           </label><input type="checkbox" name="Angular" id="Angular">
+    Po zaznaczeniu dostępnych opcji frameworków kliknij "Przejdź dalej"<br>
+<button id="go5" type="button">Przejdź dalej</button>  
 </div>
 
 <!--frameworki-->
@@ -149,7 +151,7 @@ if($_SESSION['flaga']=="strona3"){
 </div>
 </form>
 
-
+</main>
 </body>
 </html>';}
 else{header('location:Strona_1.php');}
